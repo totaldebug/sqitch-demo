@@ -1,0 +1,22 @@
+{
+    "name": "Sqitch Demo",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    "shutdownAction": "stopCompose",
+    "extensions": [],
+    "settings": {
+        "files.eol": "\n",
+        "editor.tabSize": 4,
+        "terminal.integrated.profiles.linux": {
+            "zsh": {
+                "path": "/bin/zsh"
+            }
+        },
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "files.trimTrailingWhitespace": true
+    }
+}

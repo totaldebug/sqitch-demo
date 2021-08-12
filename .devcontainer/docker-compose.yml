@@ -1,0 +1,23 @@
+---
+version: '3'
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ..:/workspace:cached
+    command: sleep infinity
+    network_mode: service:db
+  db:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=sqitch-demo
+      - POSTGRES_PASSWORD=Password1
+      - POSTGRES_DB=sqitch-demo
+volumes:
+  postgres-data:
